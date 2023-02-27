@@ -2,6 +2,13 @@
 Unitree Go1 EDU
 ===============
 
+.. note::
+
+    This documentation is currently under construction and resources may change locations without warning.
+    Items may also not be correct — feel free to `submit an issue report or PR`_ to address any problems you come across.
+
+.. _`submit an issue report or PR`: https://github.com/TrossenRobotics/unitree_go1_docs/issues?q=
+
 .. image:: _images/go1.png
     :width: 400px
     :align: center
@@ -18,7 +25,6 @@ Table of Contents:
 ==================
 
 .. toctree::
-    :maxdepth: 2
     :titlesonly:
 
     getting_started.rst
