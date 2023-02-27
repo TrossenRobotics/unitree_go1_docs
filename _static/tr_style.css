@@ -188,6 +188,21 @@ div.highlight {
     margin-bottom: 0px;
 }
 
+
+/*
+    Define class that makes table borders invisible (for structuring content)
+*/
+
+div.no-table.container,
+div.no-table.container table,
+div.no-table.container td,
+div.no-table.container th,
+div.no-table.container tr,
+div.no-table.container tbody {
+    border: transparent;
+    background-color: transparent;
+}
+
 /* gif start on click */
 
 .static,

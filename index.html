@@ -41,12 +41,16 @@
     </div>
   </div>
   
-            <a href="#">
-            <img src="_static/logo_go1.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="#">
+            
+              <img src="_static/logo_go1.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -73,10 +77,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Unitree Go1 EDU</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/docs/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -86,6 +90,11 @@
              
   <div class="section" id="unitree-go1-edu">
 <h1>Unitree Go1 EDU<a class="headerlink" href="#unitree-go1-edu" title="Permalink to this headline"></a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This documentation is currently under construction and resources may change locations without warning.
+Items may also not be correct — feel free to <a class="reference external" href="https://github.com/TrossenRobotics/unitree_go1_docs/issues?q=" rel="noopener noreferrer" target="_blank">submit an issue report or PR</a> to address any problems you come across.</p>
+</div>
 <img alt="_images/go1.png" class="align-center" src="_images/go1.png" style="width: 400px;" />
 <div class="section" id="what-s-here">
 <h2>What’s Here<a class="headerlink" href="#what-s-here" title="Permalink to this headline"></a></h2>
@@ -100,8 +109,15 @@
 <h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation.html">Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/network.html">Network Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/ros.html">Getting Started with ROS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operation.html">Operation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation/overview.html">Structure Overview</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="specifications.html">Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads</a></li>
 </ul>
@@ -119,7 +135,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Trossen Robotics.</p>
+    <p>&#169; Copyright 2023, Trossen Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
