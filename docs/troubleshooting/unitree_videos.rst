@@ -11,11 +11,15 @@ Go1 Introduction
 .. youtube:: cNhU_t3xLok
     :align: center
 
-Unitree Go1 Operation
-=====================
+.. _label-unitree-videos-go1-operation:
+
+Go1 Operation
+=============
 
 .. youtube:: RJuhsdB8rTc
     :align: center
+
+.. _label-unitree-videos-handheld-controller:
 
 Handheld Controller Operation Demonstration
 ===========================================
@@ -29,17 +33,23 @@ Handheld Controller Button Set
 .. youtube:: 1ArYQExQmuQ
     :align: center
 
+.. _label-unitree-videos-mobile-app:
+
 Mobile Phone Application Demonstration
 ======================================
 
 .. youtube:: vqrU3d6c5_Q
     :align: center
 
+.. _label-unitree-videos-web-app:
+
 Web Application Demonstration
 =============================
 
 .. youtube:: rh7l6hFhTyE
     :align: center
+
+.. _label-unitree-videos-label-controller:
 
 Label (Following) Controller Demonstration
 ==========================================
@@ -52,6 +62,8 @@ Go1 External Power Supply
 
 .. youtube:: J9qNIdaDams
     :align: center
+
+.. _label-unitree-videos-unitree-legged-sdk:
 
 Controlling Unitree Robots with the unitree_legged_sdk
 ======================================================
