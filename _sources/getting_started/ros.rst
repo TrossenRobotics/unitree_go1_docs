@@ -4,6 +4,9 @@ Getting Started with ROS
 
 This guide is intended to help users get started using the Go1 EDU using ROS.
 
+.. contents::
+    :local:
+
 Requirements
 ============
 

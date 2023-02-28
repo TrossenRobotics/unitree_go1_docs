@@ -67,6 +67,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../operation.html">Operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications.html">Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
         </div>
@@ -97,8 +98,21 @@
   <div class="section" id="getting-started-with-ros">
 <h1>Getting Started with ROS<a class="headerlink" href="#getting-started-with-ros" title="Permalink to this headline"></a></h1>
 <p>This guide is intended to help users get started using the Go1 EDU using ROS.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#requirements" id="id5">Requirements</a></li>
+<li><a class="reference internal" href="#software-packages" id="id6">Software Packages</a><ul>
+<li><a class="reference internal" href="#id2" id="id7">unitree_legged_sdk</a></li>
+<li><a class="reference internal" href="#id3" id="id8">unitree_ros_to_real</a></li>
+<li><a class="reference internal" href="#id4" id="id9">unitree_ros</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#workspace-setup" id="id10">Workspace Setup</a></li>
+<li><a class="reference internal" href="#running-an-example" id="id11">Running an Example</a></li>
+</ul>
+</div>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id5">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li>A basic understanding of ROS 1</li>
 <li>A computer running Linux Ubuntu 18.04</li>
@@ -106,7 +120,7 @@
 </ul>
 </div>
 <div class="section" id="software-packages">
-<h2>Software Packages<a class="headerlink" href="#software-packages" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id6">Software Packages</a><a class="headerlink" href="#software-packages" title="Permalink to this headline"></a></h2>
 <p>The following packages are used to control the robot using ROS.
 Version <code class="docutils literal notranslate"><span class="pre">v3.8.0</span></code> of the unitree_legged_sdk and the unitree_ros_to_real repositories are the latest compatible versions with the Go1 EDU.</p>
 <ul class="simple">
@@ -115,15 +129,15 @@ Version <code class="docutils literal notranslate"><span class="pre">v3.8.0</spa
 <li><a class="reference external" href="https://github.com/unitreerobotics/unitree_ros" rel="noopener noreferrer" target="_blank">unitree_ros</a></li>
 </ul>
 <div class="section" id="id2">
-<h3>unitree_legged_sdk<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id7">unitree_legged_sdk</a><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
 <p>Unitree’s SDK used to control their legged robots either onboard the robot or remotely.</p>
 </div>
 <div class="section" id="id3">
-<h3>unitree_ros_to_real<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id8">unitree_ros_to_real</a><a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
 <p>Do low or high-level control of the Go1 EDU using ROS.</p>
 </div>
 <div class="section" id="id4">
-<h3>unitree_ros<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id9">unitree_ros</a><a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
 <p>ROS Gazebo simulation and description packages for Unitree’s legged robots.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
@@ -132,7 +146,7 @@ Version <code class="docutils literal notranslate"><span class="pre">v3.8.0</spa
 </div>
 </div>
 <div class="section" id="workspace-setup">
-<h2>Workspace Setup<a class="headerlink" href="#workspace-setup" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Workspace Setup</a><a class="headerlink" href="#workspace-setup" title="Permalink to this headline"></a></h2>
 <p>Clone/download the packages and their required versions to your catkin workspace.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>-p<span class="w"> </span>catkin_ws/src<span class="w"> </span><span class="c1"># &#39;catkin_ws&#39; can be anything</span>
 <span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>catkin_ws/src
@@ -153,7 +167,7 @@ Version <code class="docutils literal notranslate"><span class="pre">v3.8.0</spa
 <p>The above command can be added to the end of the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to configure every new terminal opened.</p>
 </div>
 <div class="section" id="running-an-example">
-<h2>Running an Example<a class="headerlink" href="#running-an-example" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Running an Example</a><a class="headerlink" href="#running-an-example" title="Permalink to this headline"></a></h2>
 <p>The following steps demonstrate basic usage of the Unitree packages using high-level control.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>

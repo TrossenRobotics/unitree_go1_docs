@@ -67,6 +67,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../operation.html">Operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../specifications.html">Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
         </div>
@@ -96,27 +97,37 @@
              
   <div class="section" id="network-setup">
 <h1>Network Setup<a class="headerlink" href="#network-setup" title="Permalink to this headline"></a></h1>
-<div class="section" id="remote-pc-network-setup">
-<h2>Remote PC Network Setup<a class="headerlink" href="#remote-pc-network-setup" title="Permalink to this headline"></a></h2>
-<ol class="arabic">
-<li><p class="first">Connect to the robot’s network via a wired connection or its wireless access point.</p>
+<div class="contents local topic" id="contents">
 <ul class="simple">
+<li><a class="reference internal" href="#remote-pc-network-setup" id="id1">Remote PC Network Setup</a></li>
+<li><a class="reference internal" href="#ssh" id="id2">SSH</a><ul>
+<li><a class="reference internal" href="#wired-connection" id="id3">Wired Connection</a></li>
+<li><a class="reference internal" href="#wireless-connection" id="id4">Wireless Connection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#remote-development" id="id5">Remote Development</a><ul>
+<li><a class="reference internal" href="#vscode-remote-development" id="id6">VSCode Remote Development</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="remote-pc-network-setup">
+<h2><a class="toc-backref" href="#id1">Remote PC Network Setup</a><a class="headerlink" href="#remote-pc-network-setup" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li>Connect to the robot’s network via a wired connection or its wireless access point.<ul>
 <li>The wireless access point’s SSID will be something like <code class="docutils literal notranslate"><span class="pre">Unitree_GoXXXXXXX</span></code> and its password is <code class="docutils literal notranslate"><span class="pre">00000000</span></code> (eight zeros).</li>
 </ul>
 </li>
-<li><p class="first">Configure your connection to be on the <code class="docutils literal notranslate"><span class="pre">192.168.123.***</span></code> network segment.</p>
-</li>
-<li><p class="first">Ping the Raspberry Pi at <code class="docutils literal notranslate"><span class="pre">192.168.123.161</span></code> to check connectivity.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ping<span class="w"> </span>-c3<span class="w"> </span><span class="m">192</span>.168.123.161
-</pre></div>
-</div>
-</li>
+<li>Configure your connection to be on the <code class="docutils literal notranslate"><span class="pre">192.168.123.***</span></code> network segment.
+<code class="docutils literal notranslate"><span class="pre">***</span></code> can be anything as long as it does not conflict with anything else on the network segment.
+Set the netmask to <code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code>.</li>
 </ol>
+<img alt="../_images/wired_config.png" class="align-center" src="../_images/wired_config.png" />
 </div>
 <div class="section" id="ssh">
-<h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id2">SSH</a><a class="headerlink" href="#ssh" title="Permalink to this headline"></a></h2>
 <div class="section" id="wired-connection">
-<h3>Wired Connection<a class="headerlink" href="#wired-connection" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id3">Wired Connection</a><a class="headerlink" href="#wired-connection" title="Permalink to this headline"></a></h3>
 <p>To SSH into the robot on a wired connection:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>pi@192.168.12.1
 <span class="gp"># </span>password:<span class="w"> </span><span class="m">123</span>
@@ -132,7 +143,7 @@ For example, to SSH into the Head Nano:</p>
 See the <a class="reference internal" href="../operation/overview.html#label-go1-edu-architecture"><span class="std std-ref">Go1 EDU Architecture diagram</span></a> for a full list of IP addresses.</p>
 </div>
 <div class="section" id="wireless-connection">
-<h3>Wireless Connection<a class="headerlink" href="#wireless-connection" title="Permalink to this headline"></a></h3>
+<h3><a class="toc-backref" href="#id4">Wireless Connection</a><a class="headerlink" href="#wireless-connection" title="Permalink to this headline"></a></h3>
 <p>The network port on the back of the Go1 EDU connects directly to its internal switch.
 Because of that, any onboard controller can be directly SSH’ed into.
 For example, to SSH into the Bottom Nano:</p>
@@ -142,6 +153,33 @@ For example, to SSH into the Bottom Nano:</p>
 </div>
 <p>All Nanos share the same username of <code class="docutils literal notranslate"><span class="pre">unitree</span></code> and password of <code class="docutils literal notranslate"><span class="pre">123</span></code>.
 See the <a class="reference internal" href="../operation/overview.html#label-go1-edu-architecture"><span class="std std-ref">Go1 EDU Architecture diagram</span></a> for a full list of IP addresses.</p>
+</div>
+</div>
+<div class="section" id="remote-development">
+<h2><a class="toc-backref" href="#id5">Remote Development</a><a class="headerlink" href="#remote-development" title="Permalink to this headline"></a></h2>
+<div class="section" id="vscode-remote-development">
+<h3><a class="toc-backref" href="#id6">VSCode Remote Development</a><a class="headerlink" href="#vscode-remote-development" title="Permalink to this headline"></a></h3>
+<ol class="arabic">
+<li><p class="first">At Trossen Robotics, we use Microsoft’s VSCode and its Remote - SSH extension (also developed
+by Microsoft) for simple remote development.</p>
+<ol class="loweralpha simple">
+<li><a class="reference external" href="https://code.visualstudio.com/download" rel="noopener noreferrer" target="_blank">Install VSCode</a> for Ubuntu.</li>
+<li>Open VSCode, Press <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">P</kbd> to launch the Quick Open Menu, and run the following command.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ext</span> <span class="n">install</span> <span class="n">ms</span><span class="o">-</span><span class="n">vscode</span><span class="o">-</span><span class="n">remote</span><span class="o">.</span><span class="n">remote</span><span class="o">-</span><span class="n">ssh</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic simple" start="2">
+<li>In VSCode, press <strong>F1</strong> and run the <code class="docutils literal notranslate"><span class="pre">Remote-SSH:</span> <span class="pre">Open</span> <span class="pre">SSH</span> <span class="pre">Host...</span></code> command and select the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">New</span> <span class="pre">SSH</span> <span class="pre">Host</span></code> option.
+Enter the same <code class="docutils literal notranslate"><span class="pre">username&#64;ip</span></code> combination you used when opening the SSH connection between your remote computer and the Go1 like <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">pi&#64;192.168.12.1</span></code> or <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">unitree&#64;192.168.123.15</span></code>.
+If prompted, enter the password <code class="docutils literal notranslate"><span class="pre">123</span></code>.</li>
+<li>Once connected, use <strong>File &gt; Open Folder</strong>, and select the directory you wish to operate in, i.e. your ROS workspace if using the ROS Interface.</li>
+<li>Your instance of VSCode is now attached to the Go1’s Raspberry Pi computer and is open to your development workspace.</li>
+<li>You can open terminals in VSCode by pressing <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">`</kbd> or by using
+<strong>Terminal &gt; New Terminal</strong>.</li>
+</ol>
 </div>
 </div>
 </div>
