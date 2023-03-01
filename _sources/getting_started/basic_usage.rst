@@ -6,7 +6,7 @@ Startup Pose
 ============
 
 In order for the robot to boot properly, it must be in its startup pose before being powered on.
-The robot must be flat on its belly with its legs out to the side and feet on the ground.
+The robot must be flat on its belly with its legs out to the side and have its feet and knees touching the ground.
 
 .. image:: images/startup_pose.png
     :align: center

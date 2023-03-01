@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legged SDK &mdash; Unitree Go1 Documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tr_style.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ROS" href="ros.html" />
+    <link rel="prev" title="Network Setup" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="sidebartitle-docs-home">
+    <a href="https://docs.trossenrobotics.com/" target="_blank" class="icon icon-home">
+      &nbsp;Trossen Robotics Docs Home
+    </a>
+    <div class="sidebartitle-docs-home-hr">
+      <hr>
+    </div>
+  </div>
+  
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo_go1.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic_usage.html">Go1 Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">Network Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Legged SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ros.html">ROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera_sdk.html">Unitree Camera SDK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operation.html">Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specifications.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Unitree Go1 Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../getting_started.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Legged SDK</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/docs/getting_started/legged_sdk.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="legged-sdk">
+<h1>Legged SDK<a class="headerlink" href="#legged-sdk" title="Permalink to this headline"></a></h1>
+<p>This guide is intended to help users get started using the Go1 EDU using the <a class="reference external" href="https://github.com/unitreerobotics/unitree_legged_sdk/tree/v3.8.0" rel="noopener noreferrer" target="_blank">Unitree Legged SDK</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This guide is written with <a class="reference external" href="https://github.com/unitreerobotics/unitree_legged_sdk/tree/v3.8.0" rel="noopener noreferrer" target="_blank">v3.8.0</a> as the latest release for the Go1.</p>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#dependencies" id="id1">Dependencies</a></li>
+<li><a class="reference internal" href="#workspace-setup" id="id2">Workspace Setup</a></li>
+<li><a class="reference internal" href="#running-an-example" id="id3">Running an Example</a></li>
+</ul>
+</div>
+<div class="section" id="dependencies">
+<h2><a class="toc-backref" href="#id1">Dependencies</a><a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
+<p>The following Dependencies are required if using a remote PC to work with the robot.</p>
+<table border="1" class="docutils align-center">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Dependency</th>
+<th class="head">Minimum Version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://www.boost.org/" rel="noopener noreferrer" target="_blank">Boost</a></td>
+<td>&gt;=1.5.4</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.cmake.org/" rel="noopener noreferrer" target="_blank">CMake</a></td>
+<td>&gt;=2.8.3</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://gcc.gnu.org/" rel="noopener noreferrer" target="_blank">g++</a></td>
+<td>&gt;=8.3.0</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libboost-all-dev<span class="w"> </span>cmake<span class="w"> </span>g++
+</pre></div>
+</div>
+</div>
+<div class="section" id="workspace-setup">
+<h2><a class="toc-backref" href="#id2">Workspace Setup</a><a class="headerlink" href="#workspace-setup" title="Permalink to this headline"></a></h2>
+<ol class="arabic">
+<li><p class="first">Clone the repository at the v3.8.0 tag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>v3.8.0<span class="w"> </span>https://github.com/unitreerobotics/unitree_legged_sdk.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Build the SDK.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>unitree_legged_sdk
+<span class="gp">$ </span>mkdir<span class="w"> </span>build
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>build
+<span class="gp">$ </span>cmake<span class="w"> </span>..
+<span class="gp">$ </span>make
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="running-an-example">
+<h2><a class="toc-backref" href="#id3">Running an Example</a><a class="headerlink" href="#running-an-example" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/unitreerobotics/unitree_legged_sdk/tree/v3.8.0/example" rel="noopener noreferrer" target="_blank">C++ Legged SDK demos source</a></li>
+<li><a class="reference external" href="https://github.com/unitreerobotics/unitree_legged_sdk/tree/v3.8.0/example_py" rel="noopener noreferrer" target="_blank">Python Legged SDK demos source</a></li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Run examples with ‘sudo’ for memory locking.</p>
+</div>
+<p>The following steps demonstrate basic usage of the Unitree Legged SDK using high-level control.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">During this demo, the robot will walk around.
+Make sure nothing is in the robot’s way.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>unitree_legged_sdk/build
+<span class="gp">$ </span>./example_walk
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For ARM-based platforms, change <code class="docutils literal notranslate"><span class="pre">sys.path.append('../lib/python/amd64')</span></code> to <code class="docutils literal notranslate"><span class="pre">sys.path.append('../lib/python/arm64')</span></code></p>
+</div>
+<p>The following steps demonstrate basic usage of the Unitree Legged SDK using high-level control.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">During this demo, the robot will walk around.
+Make sure nothing is in the robot’s way.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>unitree_legged_sdk/example_py
+<span class="gp">$ </span>python3<span class="w"> </span>example_walk.py
+</pre></div>
+</div>
+</div></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="network.html" class="btn btn-neutral float-left" title="Network Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ros.html" class="btn btn-neutral float-right" title="ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Trossen Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

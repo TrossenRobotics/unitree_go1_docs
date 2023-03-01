@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Structure Overview &mdash; Unitree Go1 Documentation</title>
+  <title>Overview &mdash; Unitree Go1 Documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -24,7 +24,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using the unitree_legged_sdk" href="unitree_legged_sdk.html" />
+    <link rel="next" title="Using the unitree_legged_sdk" href="legged_sdk.html" />
     <link rel="prev" title="Operation" href="../operation.html" /> 
 </head>
 
@@ -61,8 +61,8 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../operation.html">Operation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Structure Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unitree_legged_sdk.html">Using the unitree_legged_sdk</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legged_sdk.html">Using the unitree_legged_sdk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ros.html">Using the ROS Interface</a></li>
 </ul>
 </li>
@@ -86,7 +86,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../operation.html">Operation</a></li>
-      <li class="breadcrumb-item active">Structure Overview</li>
+      <li class="breadcrumb-item active">Overview</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/docs/operation/overview.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -96,10 +96,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="structure-overview">
-<h1>Structure Overview<a class="headerlink" href="#structure-overview" title="Permalink to this headline"></a></h1>
-<div class="section" id="structure">
-<h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline"></a></h2>
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h1>
+<div class="section" id="operating-modes">
+<h2>Operating Modes<a class="headerlink" href="#operating-modes" title="Permalink to this headline"></a></h2>
+<p>There are two operating modes the robot runs in: high-level and low-level.
+High-level operation allows for whole-body control like commanding velocities and orientations to the robot.
+Low-level operation allows for control over individual joints where the user can command position, velocities, and torques to each motor in each leg.</p>
+</div>
+<div class="section" id="network-architecture">
+<h2>Network Architecture<a class="headerlink" href="#network-architecture" title="Permalink to this headline"></a></h2>
 <img alt="../_images/go1_edu_architecture.png" class="align-center" id="label-go1-edu-architecture" src="../_images/go1_edu_architecture.png" />
 </div>
 </div>
@@ -109,7 +115,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../operation.html" class="btn btn-neutral float-left" title="Operation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="unitree_legged_sdk.html" class="btn btn-neutral float-right" title="Using the unitree_legged_sdk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="legged_sdk.html" class="btn btn-neutral float-right" title="Using the unitree_legged_sdk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
