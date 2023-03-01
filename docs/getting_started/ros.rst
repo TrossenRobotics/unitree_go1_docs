@@ -1,6 +1,6 @@
-========================
-Getting Started with ROS
-========================
+===
+ROS
+===
 
 This guide is intended to help users get started using the Go1 EDU using ROS.
 
@@ -55,16 +55,24 @@ Clone/download the packages and their required versions to your catkin workspace
 .. code-block:: console
 
     $ mkdir -p catkin_ws/src # 'catkin_ws' can be anything
-    $ cd catkin_ws/src
-    $ git clone https://github.com/unitreerobotics/unitree_legged_sdk -b v3.8.0
-    $ git clone https://github.com/unitreerobotics/unitree_ros_to_real -b v3.8.0
-    $ git clone https://github.com/unitreerobotics/unitree_ros
+    $ cd ~/catkin_ws/src
+    $ git clone -b v3.8.0 https://github.com/unitreerobotics/unitree_legged_sdk
+    $ git clone -b v3.8.0 https://github.com/unitreerobotics/unitree_ros_to_real
+
+Get ROS dependencies
+
+.. code-block:: console
+
+    $ cd ~/catkin_ws
+    $ rosdep update --include-eol-distros
+    $ rosdep install --from-paths src --ignore-src -r -y --rosdistro=$ROS_DISTRO
+    $ catkin_make
 
 Build the workspace.
 
 .. code-block:: console
 
-    $ cd catkin_ws/src
+    $ cd ~/catkin_ws/src
     $ catkin_make
 
 Source the devel space to configure your terminal's environment to find packages, launch files, executables, etc.
@@ -77,6 +85,8 @@ The above command can be added to the end of the ``~/.bashrc`` file to configure
 
 Running an Example
 ==================
+
+Examples ROS demos can be found in the `unitree_legged_real/src/exe`_ directory.
 
 The following steps demonstrate basic usage of the Unitree packages using high-level control.
 
@@ -105,3 +115,5 @@ Running the state_sub demo subscribes to the robot's state and gets feedback fro
 .. code-block:: console
 
     rosrun unitree_legged_real state_sub
+
+.. _`unitree_legged_real/src/exe`: https://github.com/unitreerobotics/unitree_ros_to_real/tree/v3.8.0/unitree_legged_real/src/exe
