@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Go1 Basic Usage &mdash; Unitree Go1 Documentation</title>
+  <title>Protective Frame Setup &mdash; Unitree Go1 Documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Network Setup" href="network.html" />
-    <link rel="prev" title="Getting Started" href="../getting_started.html" /> 
+    <link rel="next" title="Operation" href="../operation.html" />
+    <link rel="prev" title="Unitree Camera SDK" href="camera_sdk.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,12 +60,12 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Go1 Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_usage.html">Go1 Basic Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="network.html">Network Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legged_sdk.html">Legged SDK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ros.html">ROS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camera_sdk.html">Unitree Camera SDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="frame.html">Protective Frame Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Protective Frame Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../operation.html">Operation</a></li>
@@ -89,9 +89,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../getting_started.html">Getting Started</a></li>
-      <li class="breadcrumb-item active">Go1 Basic Usage</li>
+      <li class="breadcrumb-item active">Protective Frame Setup</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/docs/getting_started/basic_usage.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/TrossenRobotics/unitree_go1_docs/blob/main/docs/getting_started/frame.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -99,30 +99,100 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="go1-basic-usage">
-<h1>Go1 Basic Usage<a class="headerlink" href="#go1-basic-usage" title="Permalink to this headline"></a></h1>
-<div class="section" id="startup-pose">
-<h2>Startup Pose<a class="headerlink" href="#startup-pose" title="Permalink to this headline"></a></h2>
-<p>In order for the robot to boot properly, it must be in its startup pose before being powered on.
-The robot must be flat on its belly with its legs out to the side and have its feet and knees touching the ground.</p>
-<img alt="../_images/startup_pose.png" class="align-center" src="../_images/startup_pose.png" />
+  <div class="section" id="protective-frame-setup">
+<h1>Protective Frame Setup<a class="headerlink" href="#protective-frame-setup" title="Permalink to this headline"></a></h1>
+<p>The following guide walks through the setup of the Go1’s protective frame.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">When not using the protective frame, do NOT use the emergency stop remote.
+This may cause the robot to be seriously damaged.
+Damage caused by this is not covered under Unitree’s warranty</p>
 </div>
-<div class="section" id="powering-on">
-<h2>Powering On<a class="headerlink" href="#powering-on" title="Permalink to this headline"></a></h2>
-<p>With the battery inserted into the robot, press the button on the battery once with a short press followed by another long press.
-Hold the second press until the lights flash and you hear the fans on the robot start up.</p>
+<div class="section" id="assembly-reference">
+<h2>Assembly Reference<a class="headerlink" href="#assembly-reference" title="Permalink to this headline"></a></h2>
+<div class="no-table docutils container">
+<table border="1" class="colwidths-given docutils align-center">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="../_images/frame.png" class="first last align-center" src="../_images/frame.png" />
+</td>
+<td><table border="1" class="first last docutils align-center">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Frame Component</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[1] Bottom Support Rod</td>
+<td>1.2m</td>
+</tr>
+<tr class="row-odd"><td>[2] Side Support Rod</td>
+<td>1.2m</td>
+</tr>
+<tr class="row-even"><td>[3] Top Support Rod</td>
+<td>1.2m</td>
+</tr>
+<tr class="row-odd"><td>[4] Top Hanging Rod</td>
+<td>0.7m</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="general-go1-operation">
-<h2>General Go1 Operation<a class="headerlink" href="#general-go1-operation" title="Permalink to this headline"></a></h2>
-<p>See the <a class="reference internal" href="../troubleshooting/unitree_videos.html#label-unitree-videos-go1-operation"><span class="std std-ref">Go1 Operation</span></a> video for details.</p>
+<div class="section" id="top-hanging-rod-top-support-rod-mounting">
+<h3>Top Hanging Rod / Top Support Rod Mounting<a class="headerlink" href="#top-hanging-rod-top-support-rod-mounting" title="Permalink to this headline"></a></h3>
+<img alt="../_images/top_hanging_support_mount.png" class="align-center" src="../_images/top_hanging_support_mount.png" />
 </div>
-<div class="section" id="handheld-controller">
-<h2>Handheld Controller<a class="headerlink" href="#handheld-controller" title="Permalink to this headline"></a></h2>
-<p>See the <a class="reference internal" href="../troubleshooting/unitree_videos.html#label-unitree-videos-handheld-controller"><span class="std std-ref">Handheld Controller Operation Demonstration</span></a> video for details.</p>
+<div class="section" id="wheel-bottom-support-rod-mounting">
+<h3>Wheel / Bottom Support Rod Mounting<a class="headerlink" href="#wheel-bottom-support-rod-mounting" title="Permalink to this headline"></a></h3>
+<img alt="../_images/wheel_mount.png" class="align-center" src="../_images/wheel_mount.png" />
 </div>
-<div class="section" id="label-following-controller">
-<h2>Label (Following) Controller<a class="headerlink" href="#label-following-controller" title="Permalink to this headline"></a></h2>
-<p>See the <a class="reference internal" href="../troubleshooting/unitree_videos.html#label-unitree-videos-label-controller"><span class="std std-ref">Label (Following) Controller Demonstration</span></a> video for details.</p>
+<div class="section" id="final-result">
+<h3>Final Result<a class="headerlink" href="#final-result" title="Permalink to this headline"></a></h3>
+<img alt="../_images/frame_result.png" class="align-center" src="../_images/frame_result.png" />
+</div>
+</div>
+<div class="section" id="assembly-steps">
+<h2>Assembly Steps<a class="headerlink" href="#assembly-steps" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li>Assemble the bracket screws, washers, and nuts together.</li>
+</ol>
+<div class="no-table docutils container">
+<table border="1" class="docutils align-center">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="../_images/bracket.png" class="first last align-center" src="../_images/bracket.png" style="width: 450px;" />
+</td>
+<td><img alt="../_images/bracket_assembled.png" class="first last align-center" src="../_images/bracket_assembled.png" style="width: 300px;" />
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple" start="2">
+<li>Install wheels to Bottom Support Rod [1].
+Secure the two holes on the wheel diagonals.</li>
+<li>Install Left and Right Side Support Rods [2].
+Fix the side support bar [2] to the Bottom Support Rod [1].</li>
+<li>Install Top Support Rod [3] to the Top Hanging Rod [4].
+Connect the brackets on both sides to the Top Support Rod [3], leaving the screws loose.
+After they are connected, tighten the screws.</li>
+<li>Install the tether.</li>
+</ol>
+<img alt="../_images/tether.png" class="align-center" src="../_images/tether.png" />
 </div>
 </div>
 
@@ -130,8 +200,8 @@ Hold the second press until the lights flash and you hear the fans on the robot 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="network.html" class="btn btn-neutral float-right" title="Network Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="camera_sdk.html" class="btn btn-neutral float-left" title="Unitree Camera SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../operation.html" class="btn btn-neutral float-right" title="Operation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
