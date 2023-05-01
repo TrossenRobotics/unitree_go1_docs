@@ -7,3 +7,7 @@ Downloads
 *   :download:`Go1 Software Manual</_downloads/go1_software_manual.pdf>`
 *   :download:`Go1 Unitree Legged SDK Manual</_downloads/go1_unitree_legged_sdk_manual.pdf>`
 *   :download:`Go1 Protective Frame Assembly Guide </_downloads/go1_protective_frame_assembly_guide.pdf>`
+
+*   `Go1 App`_
+
+.. _`Go1 App`: https://www.unitree.com/en/app/
