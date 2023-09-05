@@ -56,6 +56,23 @@ Workspace Setup
 Running Examples
 ================
 
+.. note::
+
+  You may have to kill processes that occupy the cameras' resources before running the examples.
+  To do so, run the commands given in the `example_putImagetrans demo`_.
+
+  .. code-block:: console
+
+    # If you start this file, you must bash "kill.sh" to turn off automatic startup program.
+    # "Unitree/autostart/02camerarosnode/kill.sh" and "Unitree/autostart/04imageai/kill.sh".
+    # You can also use the following instructions:
+
+    ps -A | grep point | awk '{print $1}' | xargs kill -9
+    ps -aux|grep mqttControlNode|grep -v grep|head -n 1|awk '{print $2}'|xargs kill -9
+    ps -aux|grep live_human_pose|grep -v grep|head -n 1|awk '{print $2}'|xargs kill -9
+
+.. _`example_putImagetrans demo`: https://github.com/unitreerobotics/UnitreecameraSDK/blob/ecd2058ba3f033af11c2d2a0306b44cc8d819332/examples/example_putImagetrans.cc#L43-L48
+
 Get Camera Raw Image
 --------------------
 

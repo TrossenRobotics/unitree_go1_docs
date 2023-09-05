@@ -162,6 +162,20 @@
 </div>
 <div class="section" id="running-examples">
 <h2>Running Examples<a class="headerlink" href="#running-examples" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You may have to kill processes that occupy the cameras’ resources before running the examples.
+To do so, run the commands given in the <a class="reference external" href="https://github.com/unitreerobotics/UnitreecameraSDK/blob/ecd2058ba3f033af11c2d2a0306b44cc8d819332/examples/example_putImagetrans.cc#L43-L48" rel="noopener noreferrer" target="_blank">example_putImagetrans demo</a>.</p>
+<div class="last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>If<span class="w"> </span>you<span class="w"> </span>start<span class="w"> </span>this<span class="w"> </span>file,<span class="w"> </span>you<span class="w"> </span>must<span class="w"> </span>bash<span class="w"> </span><span class="s2">&quot;kill.sh&quot;</span><span class="w"> </span>to<span class="w"> </span>turn<span class="w"> </span>off<span class="w"> </span>automatic<span class="w"> </span>startup<span class="w"> </span>program.
+<span class="gp"># </span><span class="s2">&quot;Unitree/autostart/02camerarosnode/kill.sh&quot;</span><span class="w"> </span>and<span class="w"> </span><span class="s2">&quot;Unitree/autostart/04imageai/kill.sh&quot;</span>.
+<span class="gp"># </span>You<span class="w"> </span>can<span class="w"> </span>also<span class="w"> </span>use<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>instructions:
+
+<span class="go">ps -A | grep point | awk &#39;{print $1}&#39; | xargs kill -9</span>
+<span class="go">ps -aux|grep mqttControlNode|grep -v grep|head -n 1|awk &#39;{print $2}&#39;|xargs kill -9</span>
+<span class="go">ps -aux|grep live_human_pose|grep -v grep|head -n 1|awk &#39;{print $2}&#39;|xargs kill -9</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="get-camera-raw-image">
 <h3>Get Camera Raw Image<a class="headerlink" href="#get-camera-raw-image" title="Permalink to this headline"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>UnitreeCameraSDK
